@@ -60,7 +60,7 @@ public class UserController extends BaseController{
         if (user.getPassword() == null) {
             user.setPassword("123456");
         }
-        user.setRole(2);
+//        user.setRole(2);
         userMapper.insert(user);
         return Result.success();
     }
@@ -180,7 +180,7 @@ public class UserController extends BaseController{
             user.setAge(Integer.valueOf(row.get(2).toString()));
             user.setSex(row.get(3).toString());
             user.setAddress(row.get(4).toString());
-            user.setRole(Integer.valueOf(row.get(5).toString()));
+            user.setRole(row.get(5).toString());
             saveList.add(user);
         }
         for (User user : saveList) {
