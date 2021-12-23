@@ -41,6 +41,10 @@ public class FileController extends BaseController {
         // 定义文件的唯一标识（前缀）
         String flag = IdUtil.fastSimpleUUID();
         String rootFilePath = System.getProperty("user.dir") + "/files/" + flag + "_" + originalFilename;  // 获取上传的路径
+        File saveFile = new File(rootFilePath);
+        if (!saveFile.getParentFile().exists()) {
+            saveFile.getParentFile().mkdirs();
+        }
         FileUtil.writeBytes(file.getBytes(), rootFilePath);  // 把文件写入到上传的路径
         return Result.success("http://" + ip + ":" + port + "/files/" + flag);  // 返回结果 url
     }
@@ -57,6 +61,10 @@ public class FileController extends BaseController {
         // 定义文件的唯一标识（前缀）
         String flag = IdUtil.fastSimpleUUID();
         String rootFilePath = System.getProperty("user.dir") + "/files/" + flag + "_" + originalFilename;  // 获取上传的路径
+        File saveFile = new File(rootFilePath);
+        if (!saveFile.getParentFile().exists()) {
+            saveFile.getParentFile().mkdirs();
+        }
         FileUtil.writeBytes(file.getBytes(), rootFilePath);  // 把文件写入到上传的路径
         String url = "http://" + ip + ":" + port + "/files/" + flag;
         JSONObject json = new JSONObject();
