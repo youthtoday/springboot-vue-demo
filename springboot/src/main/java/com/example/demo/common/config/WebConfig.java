@@ -13,10 +13,10 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-        registry.addInterceptor(authInterceptor())
-                .addPathPatterns("/**")
-                .excludePathPatterns("/user/login", "/user/register", "/imserver/**", "/files/**", "/alipay/**",
-                        "/doc.html", "/webjars/**", "/swagger-resources/**");
+//        registry.addInterceptor(authInterceptor())
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/user/login", "/user/register", "/imserver/**", "/files/**", "/alipay/**",
+//                        "/doc.html", "/webjars/**", "/swagger-resources/**");
 
     }
 
