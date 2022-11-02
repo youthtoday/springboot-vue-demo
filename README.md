@@ -61,6 +61,7 @@ npm run serve
 > 4. 如果非要在User实体里面扩展，你需要加上 @TableField(exist=false) 来表示这个字段在数据库不存在，否则会报错
 > 5. 日期字段的格式化，需要使用  @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8") 注解来做日期解析，可以参考Book实体里面的createTime字段
 
-## 最后，我就问一句
-## 简单不？好使不？三连了没？star了没？
-## 哈哈哈，后面再更新吧~大家保持关注鸭
+源码地址：https://gitee.com/xqnode/springboot-vue-demo
+如果源码无法下载，请使用百度云盘链接: https://pan.baidu.com/s/1npTMqLRfY7BTGuXB5LRxSA?pwd=mwge 提取码: mwge
+资料文档：https://docs.qq.com/sheet/DUWJaRWh5bGFvT09J
+软件安装：https://www.jianguoyun.com/p/Dc5ht0AQ4_2rCRirw-kD
